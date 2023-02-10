@@ -11,7 +11,6 @@ public void draw(){
 }
 
 float goldenRatio = 1.618;
-
 public void goldenSpiral(float length){
   if(length < 1)
     return;
@@ -19,8 +18,11 @@ public void goldenSpiral(float length){
   fill(0);
   noStroke();
   rect(0, 0, length, length);
+  
   fill(255);
-  arc(length, length, 2*length-1, 2*length-1, PI, 3*PI/2);
+  stroke(255, 215, 0);
+  strokeWeight(2);
+  arc(length, length, 2*length-1, 2*length-1, PI, 3*PI/2);  
   
   translate(length*goldenRatio, 0);
   rotate(PI/2);
